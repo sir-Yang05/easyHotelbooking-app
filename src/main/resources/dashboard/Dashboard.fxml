@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="20" stylesheets="@../style.css"
+      xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="dashboard.DashboardController"
+      style="-fx-background-image: url('/images/icon-hotelbackground.jpg');
+        -fx-background-size: cover;
+        -fx-background-position: center center;">
+
+    <Label text="User Dashboard" styleClass="header-label"
+           style="-fx-text-fill: white;"/>
+
+    <Pane minHeight="60"/>
+
+    <HBox spacing="15" style="-fx-translate-x: 30;">
+
+        <Button onAction="#handleRoomBooking" styleClass="btn-rounded btn-primary">
+            <graphic>
+                <ImageView fitWidth="100" fitHeight="100" preserveRatio="true">
+                    <Image url="@/images/icon-booking.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button onAction="#handleSearchOrder" styleClass="btn-rounded btn-primary">
+            <graphic>
+                <ImageView fitWidth="100" fitHeight="100" preserveRatio="true">
+                    <Image url="@/images/icon-search.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button onAction="#handleChatBot" styleClass="btn-rounded btn-primary">
+            <graphic>
+                <ImageView fitWidth="100" fitHeight="100" preserveRatio="true">
+                    <Image url="@/images/icon-chat.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+    </HBox>
+
+    <Pane fx:id="spacer" VBox.vgrow="ALWAYS"/>
+
+    <Button onAction="#handleBack" styleClass="btn-rounded btn-primary">
+        <graphic>
+            <ImageView fitWidth="50" fitHeight="50" preserveRatio="true">
+                <Image url="@/images/icon-logout.png"/>
+            </ImageView>
+        </graphic>
+    </Button>
+</VBox>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<VBox spacing="15" alignment="CENTER" stylesheets="@../style.css"
+      xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="roombooking.RoomBookingController">
+    <Label text="Room Booking" styleClass="header-label"/>
+    <HBox spacing="20" alignment="CENTER">
+        <ChoiceBox fx:id="roomTypeBox" prefWidth="120"/>
+        <DatePicker fx:id="checkinDatePicker" promptText="Check-In"/>
+        <DatePicker fx:id="checkoutDatePicker" promptText="Check-Out"/>
+    </HBox>
+    <ImageView fx:id="roomImage" fitWidth="400" fitHeight="200"/>
+    <HBox spacing="20">
+        <Button text="Book" onAction="#handleBook" styleClass="btn-rounded btn-primary"/>
+        <Button text="Back" onAction="#handleBack" styleClass="btn-rounded btn-secondary"/>
+    </HBox>
+</VBox>

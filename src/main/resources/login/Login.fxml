@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.URL?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="login.LoginController"
+      spacing="15" alignment="CENTER"
+      styleClass="root"
+      style="-fx-background-image: url('/images/icon-background.png');
+             -fx-background-size: cover;
+             -fx-background-position: center center;">
+
+    <stylesheets>
+        <URL value="@../style.css"/>
+    </stylesheets>
+
+    <Label text="Welcome to HotelFX" styleClass="header-label"/>
+
+    <!-- Username and Password fields -->
+    <TextField fx:id="usernameField" promptText="Username" prefWidth="100" prefHeight="30"/>
+    <PasswordField fx:id="passwordField" promptText="Password" prefWidth="100" prefHeight="30"/>
+
+
+    <HBox spacing="20" alignment="CENTER">
+        <!-- Login Button -->
+        <Button onAction="#handleLogin" styleClass="btn-rounded btn-primary">
+            <graphic>
+                <ImageView fitWidth="70" fitHeight="70" preserveRatio="true">
+                    <Image url="@/images/icon-login.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+
+        <!-- Register Button: Text and Icon combined -->
+        <Button fx:id="registerButton" onAction="#handleRegister" styleClass="btn-rounded btn-primary">
+            <graphic>
+                <ImageView fitWidth="40" fitHeight="40" preserveRatio="true">
+                    <Image url="@/images/icon-register.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+    </HBox>
+</VBox>

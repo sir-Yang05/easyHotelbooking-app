@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="chat.ChatBotController"
+            prefWidth="800" prefHeight="600">
+
+    <!-- 聊天区 -->
+    <center>
+        <VBox spacing="10" alignment="TOP_CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <TextArea fx:id="chatArea"
+                      editable="false"
+                      wrapText="true"
+                      prefHeight="450"
+                      promptText="聊天记录…"/>
+            <HBox spacing="5" alignment="CENTER">
+                <TextField fx:id="inputField"
+                           HBox.hgrow="ALWAYS"
+                           promptText="请输入消息…"/>
+                <Button text="发送"
+                        onAction="#handleSend"
+                        prefWidth="80" prefHeight="40"/>
+            </HBox>
+        </VBox>
+    </center>
+
+    <!-- 底部返回 -->
+    <bottom>
+        <HBox alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="0" right="0" bottom="10" left="10"/>
+            </padding>
+            <Button fx:id="backBtn"
+                    text="返回"
+                    onAction="#handleBack"
+                    prefWidth="80" prefHeight="30"/>
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<VBox spacing="10" alignment="CENTER" stylesheets="@../style.css"
+      xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="adduser.AddUserController">
+    <Label text="Add User" style="-fx-font-size:20px;"/>
+    <TextField fx:id="usernameField" promptText="Username"/>
+    <PasswordField fx:id="passwordField" promptText="Password"/>
+    <HBox spacing="10">
+        <Button text="Add User" onAction="#handleAddUser"/>
+        <Button text="Back" onAction="#handleBack"/>
+    </HBox>
+</VBox>

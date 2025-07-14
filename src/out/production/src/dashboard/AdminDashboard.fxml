@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="20" stylesheets="@../style.css"
+      xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="dashboard.AdminDashboardController">
+    <Label text="Admin Dashboard" styleClass="header-label"/>
+    <HBox spacing="15">
+        <Button text="Book Room" onAction="#handleRoomBooking" styleClass="btn-rounded btn-primary"/>
+        <Button text="Search Order" onAction="#handleSearchOrder" styleClass="btn-rounded btn-secondary"/>
+    </HBox>
+    <Button text="Logout" onAction="#handleBack" styleClass="btn-rounded btn-secondary"/>
+</VBox>

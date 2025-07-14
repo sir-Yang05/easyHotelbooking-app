@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="15" stylesheets="@../style.css"
+      xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ordersearch.OrderSearchController">
+    <Label text="Order Search" styleClass="header-label"/>
+    <HBox spacing="10">
+        <TextField fx:id="searchField" promptText="Room type..."/>
+        <Button text="Search" onAction="#handleSearch" styleClass="btn-rounded btn-primary"/>
+    </HBox>
+    <TableView fx:id="ordersTable" prefHeight="300" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="colId"        text="ID"/>
+            <TableColumn fx:id="colType"      text="Type"/>
+            <TableColumn fx:id="colUser"      text="User"/>
+            <TableColumn fx:id="colCheckin"   text="Check-In"/>
+            <TableColumn fx:id="colCheckout"  text="Check-Out"/>
+        </columns>
+    </TableView>
+    <Button text="Back" onAction="#handleBack" styleClass="btn-rounded btn-secondary"/>
+</VBox>

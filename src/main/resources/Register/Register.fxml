@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" fillWidth="false" maxHeight="600.0" maxWidth="350.0"
+      spacing="20"
+      style="-fx-background-image: url('/images/icon-background.png');
+      -fx-background-size: cover;
+      -fx-background-position: center center;
+      -fx-padding: 20;"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="login.LoginController">
+
+    <Label alignment="CENTER"
+           style="-fx-font-size: 28px; -fx-text-fill: #2c3e50; -fx-font-weight: bold;"
+           styleClass="header-label"
+           text="CREATE ACCOUNT" />
+
+    <Label text="Please fill in all fields to register"
+           style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;"
+           alignment="CENTER" />
+
+    <!-- 输入字段 -->
+    <VBox spacing="15" alignment="CENTER">
+        <TextField fx:id="usernameField"
+                   prefWidth="250"
+                   promptText="Username (min 3 characters)"
+                   style="-fx-font-size: 14px; -fx-padding: 10;" />
+
+        <PasswordField fx:id="passwordField"
+                       prefWidth="250"
+                       promptText="Password (min 6 characters)"
+                       style="-fx-font-size: 14px; -fx-padding: 10;" />
+
+        <TextField fx:id="emailField"
+                   prefWidth="250"
+                   promptText="Email Address"
+                   style="-fx-font-size: 14px; -fx-padding: 10;" />
+    </VBox>
+
+    <!-- 按钮区域 -->
+    <HBox spacing="15" alignment="CENTER">
+        <!-- 注册按钮 -->
+        <Button onAction="#confirmRegister"
+                text="Register"
+                style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10 20;"
+                prefWidth="100">
+        </Button>
+
+        <!-- 返回按钮 -->
+        <Button onAction="#handleReturnLogin"
+                text="Return"
+                style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10 20;"
+                prefWidth="100">
+        </Button>
+    </HBox>
+
+    <!-- 提示信息 -->
+    <Label text="Already have an account? Click Return to login"
+           style="-fx-font-size: 12px; -fx-text-fill: #7f8c8d;"
+           alignment="CENTER" />
+
+</VBox>
